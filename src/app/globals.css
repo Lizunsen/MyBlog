@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --muted: 220 14% 96%;
+  --border: 220 13% 91%;
+}
+
+.dark {
+  --background: 224 71% 4%;
+  --foreground: 210 20% 98%;
+  --muted: 217 33% 10%;
+  --border: 217 25% 18%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  background-image: radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.08), transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(59, 130, 246, 0.1), transparent 30%);
+}
+
+a {
+  @apply transition-all duration-200;
+}
+
+.glass-card {
+  @apply rounded-2xl border border-slate-200/70 bg-white/85 shadow-sm backdrop-blur transition-all duration-200 dark:border-slate-800 dark:bg-slate-900/70;
+}
+
+.meta-pill {
+  @apply inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs text-slate-600 transition-all duration-200 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-300;
+}
+
+.prose :is(h2, h3, h4) a {
+  @apply no-underline;
+}
+
+.prose :is(h2, h3, h4):hover a::after {
+  content: "#";
+  @apply ml-2 text-blue-500;
+}
+
+.toc-link {
+  position: relative;
+}
+
+.toc-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 60%;
+  width: 2px;
+  transform: translateY(-50%);
+  border-radius: 99px;
+  background-color: rgb(59 130 246 / 0.55);
+  opacity: 0;
+}
+
+.toc-link:hover::before {
+  opacity: 1;
+}
+
+.toc-link--active::before {
+  opacity: 1;
+}
+
+.code-shell {
+  @apply overflow-hidden rounded-xl border border-slate-200 bg-slate-950 dark:border-slate-700;
+}
+
+.code-shell__toolbar {
+  @apply flex items-center justify-between border-b border-slate-800 bg-slate-900 px-3 py-2;
+}
+
+.code-shell__lang {
+  @apply rounded bg-slate-800 px-2 py-0.5 text-xs uppercase tracking-wide text-slate-300;
+}
+
+.code-shell__copy {
+  @apply inline-flex items-center gap-1.5 rounded bg-slate-800 px-2 py-1 text-xs text-slate-300 hover:bg-slate-700;
+}
+
+.code-shell pre {
+  @apply m-0 overflow-x-auto bg-slate-950 p-4 text-sm text-slate-100;
+}

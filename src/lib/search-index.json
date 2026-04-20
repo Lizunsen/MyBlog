@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "build-personal-tech-blog",
+    "title": "从 0 到 1 搭建个人技术博客",
+    "date": "2026-04-20",
+    "summary": "记录如何用 Next.js + MDX 构建可扩展、可部署的个人技术博客。",
+    "category": "工程实践",
+    "tags": ["Next.js", "MDX", "Tailwind", "博客搭建"]
+  },
+  {
+    "slug": "mdx-writing-workflow",
+    "title": "高效的 MDX 技术写作工作流",
+    "date": "2026-04-18",
+    "summary": "总结如何通过 Frontmatter 和固定模板提升文章输出质量。",
+    "category": "学习总结",
+    "tags": ["MDX", "写作", "知识管理"]
+  }
+]

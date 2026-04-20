@@ -76,6 +76,11 @@ The command will:
 - fill title and today's date
 - avoid overwriting by appending suffix when duplicated
 
+## Auto Deploy (Git)
+
+This project can be connected to Vercel Git Integration.
+After that, every `git push` to the production branch will trigger an automatic deployment.
+
 ## Optional Enhancements
 
 - Integrate comments (Giscus)
